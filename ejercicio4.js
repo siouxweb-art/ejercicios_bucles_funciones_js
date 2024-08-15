@@ -10,18 +10,14 @@ const cartoons = [
     { name: 'Pokémon', debut: 1997 },
     { name: "Dexter's Laboratory", debut: 1996 }
   ];
-
-  // bucle
-const oldestCartoon = [];
-
-  for (const cartoon of cartoons){
-    if (cartoon.debut < oldestCartoon.debut){
-        oldestCartoon = cartoon;
+  
+  
+  let oldestCartoon = cartoons[0]; // Asumimos que el primer elemento es el más antiguo
+  
+  for (const cartoon of cartoons) {
+    if (cartoon.debut < oldestCartoon.debut) {
+      oldestCartoon = cartoon;
     }
-
-
-}
-
-console.log("La serie de dibujos animados más antigua es:", oldestCartoon.name);
-
-    8
+  }
+  
+  console.log("La serie de dibujos animados más antigua es:", oldestCartoon.name);
